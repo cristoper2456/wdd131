@@ -1,0 +1,119 @@
+/* RESET & CSS VARIABLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ce1126; /* Rojo de la bandera dominicana */
+    --secondary-color: #002d62; /* Azul de la bandera dominicana */
+    --tertiary-color: #ffffff;
+    --text-color: #1a1a1a;
+    --background-color: #e5e7eb;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border-bottom: 10px solid var(--secondary-color);
+    padding: 1.5rem;
+}
+
+main {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1400px;
+}
+
+/* PICTURE & HERO */
+picture {
+    display: block;
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    max-height: 70vh;
+}
+
+/* DATA & WEATHER SECTIONS (Móvil primero) */
+.data, .weather {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.data h2, .weather h2 {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data p, .weather p {
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon-mobile {
+    display: inline-block;
+}
+
+/* MEDIA QUERIES (DESKTOP) */
+@media screen and (min-width: 1000px) {
+    .data {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 280px;
+        margin: 0;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 280px;
+        margin: 0;
+    }
+
+    /* Requerimiento: Ocultar SVG y usar pseudo-elemento en desktop */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+    }
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    padding: 1.5rem;
+    border-top: 10px solid var(--secondary-color);
+}
