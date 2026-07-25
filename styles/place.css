@@ -1,4 +1,3 @@
-/* RESET & CSS VARIABLES */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,8 +5,8 @@
 }
 
 :root {
-    --primary-color: #ce1126; /* Rojo de la bandera dominicana */
-    --secondary-color: #002d62; /* Azul de la bandera dominicana */
+    --primary-color: #ce1126; 
+    --secondary-color: #002d62; 
     --tertiary-color: #ffffff;
     --text-color: #1a1a1a;
     --background-color: #e5e7eb;
@@ -33,7 +32,6 @@ main {
     max-width: 1400px;
 }
 
-/* PICTURE & HERO */
 picture {
     display: block;
     width: 100%;
@@ -52,7 +50,6 @@ picture {
     max-height: 70vh;
 }
 
-/* DATA & WEATHER SECTIONS (Móvil primero) */
 .data, .weather {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -82,7 +79,6 @@ picture {
     display: inline-block;
 }
 
-/* MEDIA QUERIES (DESKTOP) */
 @media screen and (min-width: 1000px) {
     .data {
         position: absolute;
@@ -100,7 +96,6 @@ picture {
         margin: 0;
     }
 
-    /* Requerimiento: Ocultar SVG y usar pseudo-elemento en desktop */
     .weather-icon-mobile {
         display: none;
     }
