@@ -131,3 +131,8 @@ footer p {
     color: #c0392b;
     font-weight: bold;
 }
+
+.required-note{
+    margin-bottom: 1rem; 
+    font-size: 0.9rem;
+}
