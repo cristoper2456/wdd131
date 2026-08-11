@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora RD - Home</title>
+    <meta name="description" content="Explora RD is your guide to the best beaches, destinations, and adventures in the Dominican Republic.">
+    <meta name="author" content="Cristopher Castro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <span class="logo">Explora RD</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img src="images/hero-beach.webp" alt="Aerial view of a Dominican Republic beach with turquoise water and palm trees" width="1500" height="750">
+            <h1>Discover the Dominican Republic</h1>
+        </div>
+
+        <section class="intro">
+            <h2>Welcome to Explora RD</h2>
+            <p>The Dominican Republic offers some of the Caribbean's most stunning beaches, rich culture, and unforgettable adventures. Whether you are looking to relax on white sand, explore colonial history, or dive into crystal clear waters, this island has something for everyone.</p>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Destinations</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="images/punta-cana.webp" alt="Punta Cana beach with palm trees" loading="lazy" width="400" height="300">
+                    <h3>Punta Cana</h3>
+                    <p>World-famous resorts and powder-white beaches on the eastern coast.</p>
+                </article>
+                <article class="card">
+                    <img src="images/samana.webp" alt="Samana peninsula coastline" loading="lazy" width="400" height="300">
+                    <h3>Samaná</h3>
+                    <p>Home to humpback whale watching and the stunning Playa Rincón.</p>
+                </article>
+                <article class="card">
+                    <img src="images/zona-colonial.webp" alt="Colonial Zone streets in Santo Domingo" loading="lazy" width="400" height="300">
+                    <h3>Zona Colonial</h3>
+                    <p>The first European city in the Americas, filled with history in Santo Domingo.</p>
+                </article>
+            </div>
+            <p><a href="destinations.html" class="cta">See All Destinations →</a></p>
+        </section>
+
+        <section class="trip-planner">
+            <h2>Plan Your Trip</h2>
+            <p>Select a destination below to see a quick trip suggestion generated for you.</p>
+            <label for="destinationSelect">Choose a destination:</label>
+            <select id="destinationSelect"></select>
+            <div id="tripSuggestion" class="trip-suggestion"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Explora RD | Cristopher Castro | Dominican Republic</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

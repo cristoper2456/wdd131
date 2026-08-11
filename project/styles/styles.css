@@ -1,0 +1,254 @@
+:root {
+    --red: #c8102e;
+    --blue: #002d62;
+    --white: #ffffff;
+    --bg: #f7f7f7;
+    --text: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+header {
+    background-color: var(--blue);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--red);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--white);
+    background-color: rgba(0, 45, 98, 0.8);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.intro, .featured, .trip-planner {
+    margin: 2rem 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 0 1rem;
+}
+
+.card p {
+    padding-bottom: 1rem;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page-title {
+    color: var(--blue);
+    margin: 1.5rem 0;
+}
+
+.page-intro {
+    margin-bottom: 1.5rem;
+}
+
+.destination-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.destination {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.destination img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 1rem;
+}
+
+.trip-suggestion {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-left: 4px solid var(--red);
+    border-radius: 4px;
+    min-height: 2rem;
+}
+
+.contact-form {
+    max-width: 500px;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label, legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.required {
+    color: var(--red);
+}
+
+input[type="submit"] {
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--blue);
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--white);
+}
+
+@media screen and (min-width: 700px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .destination {
+        display: flex;
+    }
+
+    .destination img {
+        width: 40%;
+        height: auto;
+    }
+
+    .destination-info {
+        flex: 1;
+    }
+}

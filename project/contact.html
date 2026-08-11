@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora RD - Contact</title>
+    <meta name="description" content="Contact Explora RD to request travel information or book a guided tour in the Dominican Republic.">
+    <meta name="author" content="Cristopher Castro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <span class="logo">Explora RD</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Contact Us</h1>
+        <p class="page-intro">Interested in booking a tour or have a question? Fill out the form below and our team will get back to you.</p>
+
+        <form method="get" action="thankyou.html" class="contact-form">
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination of Interest</label>
+                <select id="destination" name="destination"></select>
+            </div>
+
+            <div class="form-group">
+                <label for="travelDate">Preferred Travel Date</label>
+                <input type="date" id="travelDate" name="travelDate">
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Interests (check all that apply)</legend>
+                <input type="checkbox" id="beaches" name="interests" value="beaches">
+                <label for="beaches">Beaches</label>
+
+                <input type="checkbox" id="history" name="interests" value="history">
+                <label for="history">History & Culture</label>
+
+                <input type="checkbox" id="adventure" name="interests" value="adventure">
+                <label for="adventure">Adventure & Hiking</label>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Explora RD | Cristopher Castro | Dominican Republic</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
